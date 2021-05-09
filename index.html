@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+    <title>Friends and Animals</title>
+
+    <link href='https://fonts.googleapis.com/css?family=canvas-print' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+
+<body>
+  <!------------ Page 1: HOME ---------------->
+  
+  <div data-role="page" id = "home">
+
+      <!-- page header -->
+        <div data-role="header" data-theme="c">
+          <h2 id="Header">FRIENDS & ANIMALS</h2>
+          <br>
+          <h2 id="Header2">HOME PAGE</h2>
+          <img src="images/kitty.png" alt="Kitty" id="kittyimage">
+          <div data-role="navbar" data-theme='b'>
+            <ul>
+                <li><a href="#add">Add Friends</a></li>
+                <li><a href="#list">List Friends</a></li>
+            </ul>
+          </div><!-- navbar -->
+
+        </div>
+  
+        <!-- page content -->
+        <div data-role="main" data-theme='a'> 
+          <div class="newFont" id="home1">
+            <img src="images/girlwithdog.png" alt="girl with dog" id="girlwithdogimagehome">
+              <h1>My Favorite Friends</h1>
+              <h1>And Their Favorite Animals<h1>
+          </div>
+        </div>
+        
+        <!-- page footer -->
+        <div data-role="footer" data-theme='a'>
+        <img src="images/animals.png" alt="Animals" id="animals">
+          <h4 id="footertext">For Entertainment Puropose Only</h4>
+        </div>
+
+        
+  </div>
+
+  <!------------------------------------------>
+  <!------------ Page 2: ADD  ---------------->
+   
+  <div data-role="page" id="add">
+
+    <!--  page header -->
+    <div data-role="header" data-theme='c'>
+      <h2 id="Header">FRIENDS & ANIMALS</h2>
+      <br>
+      <h2 id="Header2">ADD PAGE</h2>
+      <img src="images/kitty.png" alt="Kitty" id="kittyimage">
+      <div data-role="navbar" data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#list">List Friends</a></li>
+        </ul>
+      </div><!-- /navbar -->
+
+    </div>
+  
+        <!-- page content -->
+        <div data-role="main" data-theme='c' class="ui-content">
+          <img src="images/girlwithdog.png" alt="girl with dog" id="girlwithdogimage">
+          <h2 id="FriendsTitle">Enter a Friend's Name and Favorite Animal</h2>
+          Friend's Name <br />
+          <input type="text" value="" id="friendname" />
+          Favorite Animal <br />
+          <input type="text" value="" id="favoriteanimal" />
+
+        <input type="button" value="Add" id="buttonAdd" data-inline="true" />
+        <input type="button" value="Clear" id="buttonClear" data-inline="true" />
+
+        </div>
+ 
+        <!-- page footer -->
+        <div data-role="footer" data-theme='a'>
+          <img src="images/animals.png" alt="Animals" id="animals">
+            <h4 id="footertext">For Entertainment Puropose Only</h4>
+          </div>
+ 
+    </div>
+
+ <!------------------------------------------->
+ <!------------  Page 3: LIST ---------------->
+
+  <div data-role="page" id="list">
+
+    <!--  page header -->
+    <div data-role="header" data-theme='c'>
+      <h2 id="Header">FRIENDS & ANIMALS</h2>
+      <br>
+      <h2 id="Header2">LIST PAGE</h2>
+      <img src="images/kitty.png" alt="Kitty" id="kittyimage">
+      <div data-role="navbar" data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#add">Add Friends</a></li>
+        </ul>
+      </div><!-- /navbar -->
+
+  </div>
+ 
+    <!--   page content -->
+    <div data-role="content" data-theme='e'>
+      <img src="images/girlwithdog.png" alt="girl with dog" id="girlwithdogimage">
+      <h2 id="FriendsTitle">All Friends and Animals</h2>
+      <div id="divFriendList"></div>
+      <ul id="myul"></ul>
+      <input type="button" value="Sort By Friend" id="buttonSortFriend" data-inline="true" />
+      <input type="button" value="Sort By Animal" id="buttonSortAnimal" data-inline="true" />
+    </div>
+
+ 
+        <!-- page footer -->
+        <div data-role="footer" data-theme='a'>
+          <img src="images/animals.png" alt="Animals" id="animals">
+            <h4 id="footertext">For Entertainment Puropose Only</h4>
+          </div>
+ 
+    </div>
+
+ <script type="text/javascript" src="script.js"></script>
+   
+</body>
+</html>
