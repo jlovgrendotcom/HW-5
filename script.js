@@ -1,9 +1,11 @@
 
 let friendsArray = [];
 
-let friendsObject = function (pFriend, pAnimal) {
+let friendsObject = function (pFriend, pAnimal,pFiction,pColor) {
     this.Friend = pFriend;
     this.Animal = pAnimal;
+    this.Fiction = pFiction;
+    this.Color = pColor;
 }
 
 //---------- wait until document load event --------------------------------------------
@@ -14,12 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("buttonAdd").addEventListener("click", function () {
       friendsArray.push(new friendsObject(document.getElementById("friendname").value, 
-      document.getElementById("favoriteanimal").value));
+      document.getElementById("favoriteanimal").value, document.getElementById("fictionanimal").value,document.getElementById("colors").value ));
     });
 
     document.getElementById("buttonClear").addEventListener("click", function () {
       document.getElementById("friendname").value = "";
       document.getElementById("favoriteanimal").value = "";
+      document.getElementById("fictionanimal").value = "";
+      document.getElementById("colors").value = "";
     });
 
     document.getElementById("buttonSortFriend").addEventListener("click", function () {
@@ -29,6 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("buttonSortAnimal").addEventListener("click", function () {
       friendsArray.sort(dynamicSort("Animal"));
+      createList();
+  });
+    document.getElementById("buttonSortFiction").addEventListener("click", function () {
+      friendsArray.sort(dynamicSort("Fiction"));
+      createList();
+  });
+    document.getElementById("buttonSortColor").addEventListener("click", function () {
+      friendsArray.sort(dynamicSort("Color"));
       createList();
   });
 
@@ -47,7 +59,7 @@ function createList() {
 
     friendsArray.forEach(function (element,) {   
         var li = document.createElement('li');
-        li.innerHTML =  element.Friend + ":  " + element.Animal;
+        li.innerHTML =  element.Friend + ":  " + element.Animal+ ":  " + element.Fiction+ ":  " + element.Color;
         theList.appendChild(li);
     });
 
