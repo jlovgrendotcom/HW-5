@@ -76,8 +76,19 @@
           <h2 id="FriendsTitle">Enter a Friend's Name and Favorite Animal</h2>
           Friend's Name <br />
           <input type="text" value="" id="friendname" />
-          Favorite Animal <br />
+          All Time Favorite Animal <br />
           <input type="text" value="" id="favoriteanimal" />
+          Favorite Fictional Animal <br />
+          <input type="text" value="" id="fictionanimal" />
+      <label for="animalcolor">Favorite Animal Color:</label>
+  <select name="animalcolor" id="colors">
+    <option value="Black">Black</option>
+    <option value="Brown">Brown</option>
+    <option value="White">White</option>
+    <option value="Grey">Grey</option>
+    <option value="Multi">Multi</option>
+  </select>
+  <br><br>
 
         <input type="button" value="Add" id="buttonAdd" data-inline="true" />
         <input type="button" value="Clear" id="buttonClear" data-inline="true" />
@@ -119,7 +130,9 @@
       <div id="divFriendList"></div>
       <ul id="myul"></ul>
       <input type="button" value="Sort By Friend" id="buttonSortFriend" data-inline="true" />
-      <input type="button" value="Sort By Animal" id="buttonSortAnimal" data-inline="true" />
+      <input type="button" value="Sort By Favorite Animal" id="buttonSortAnimal" data-inline="true" />
+      <input type="button" value="Sort By Favorite Fictional Animal" id="buttonSortFiction" data-inline="true" />
+      <input type="button" value="Sort By Favorite Animal Color" id="buttonSortColor" data-inline="true" />
     </div>
 
  
